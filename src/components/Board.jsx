@@ -2,6 +2,8 @@ import * as React from 'react';
 import Knight from './Knight';
 import Square from './Square';
 import { canMoveKnight, moveKnight } from './Game';
+import { DragDropContextProvider } from 'react-dnd';
+import HTML5Backend from 'react-dnd-html5-backend';
 
 export default function Board({knightPosition}) {
     function renderSquare(i, [knightX, knightY]) {
@@ -35,14 +37,16 @@ export default function Board({knightPosition}) {
     }
   
     return (
-      <div style={{
-        width: '100%',
-        height: '100vh',
-        overflow: 'auto',
-        display: 'flex',
-        flexWrap: 'wrap'
-      }}>
-        {squares}
-      </div>
+      <DragDropContextProvider backend={HTML5Backend}>
+        <div style={{
+          width: '100%',
+          height: '100vh',
+          overflow: 'auto',
+          display: 'flex',
+          flexWrap: 'wrap'
+        }}>
+          {squares}
+        </div>
+      </DragDropContextProvider>
     );
 };
