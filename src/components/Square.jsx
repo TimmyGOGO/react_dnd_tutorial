@@ -1,16 +1,11 @@
 import React from 'react';
 
-export interface SquareProps {
-	black: boolean
-	children: JSX.Element
-};
-
 const squareStyle = {
 	width: '100%',
 	height: '100%',
 };
 
-const Square: React.SFC<SquareProps> = ({ black, children }) => {
+export default function Square({ black, children }) {
 	const backgroundColor = black ? 'black' : 'white';
 	const color = black ? 'white' : 'black';
 	return (
@@ -25,5 +20,3 @@ const Square: React.SFC<SquareProps> = ({ black, children }) => {
 		</div>
 	)
 }
-
-export default Square;
