@@ -15,12 +15,14 @@ const knightSource = {
 function collect(connect, monitor) {
   return {
     connectDragSource: connect.dragSource(),
+    connectDragPreview: connect.dragPreview(),
     isDragging: monitor.isDragging()
   }
 }
 
 // there are named parametres instead of props:
 function Knight({ connectDragSource, isDragging }) {
+
   return connectDragSource(
     <div style={{
       opacity: isDragging ? 0.5 : 1,
