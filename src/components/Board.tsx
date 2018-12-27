@@ -8,7 +8,7 @@ import Knight from './Knight';
 import BoardSquare from './BoardSquare';
 
 export interface BoardProps {
-  knightPostition: [number, number]
+  knightPosition: [number, number]
 } 
 
 // for styled-components:
@@ -46,7 +46,7 @@ export default class Board extends React.Component<BoardProps> {
   }
 
   private renderPiece(x: number, y: number) {
-    const [knightX, knightY] = this.props.knightPostition;
+    const [knightX, knightY] = this.props.knightPosition;
     const isKnightHere = x === knightX && y === knightY;
     return isKnightHere ? <Knight /> : null;
 
