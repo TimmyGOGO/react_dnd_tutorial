@@ -1,7 +1,7 @@
 import React from 'react';
 import Square from './Square';
 import { canMoveKnight, moveKnight } from './Game';
-import { ItemTypes } from '../Constants';
+import { ItemTypes } from '../ItemTypes';
 import { DropTarget } from 'react-dnd';
 
 // drop target spec that only handles 'drop event':
