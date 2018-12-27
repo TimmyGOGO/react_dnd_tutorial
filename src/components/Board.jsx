@@ -6,9 +6,6 @@ import { DragDropContextProvider } from 'react-dnd';
 import HTML5Backend from 'react-dnd-html5-backend';
 import BoardSquare from './BoardSquare';
 
-
-
-
 export default function Board({knightPosition}) {
   function renderSquare(i, knightPosition) {
     const x = i % 8;
