@@ -1,10 +1,8 @@
 import * as React from 'react';
 import styled from 'styled-components';
 import Knight from './Knight';
-// import Square from './Square';
-// import { canMoveKnight, moveKnight } from './Game';
-// import { DragDropContextProvider } from 'react-dnd';
-// import HTML5Backend from 'react-dnd-html5-backend';
+import { DragDropContextProvider, DragDropContext } from 'react-dnd';
+import HTML5Backend from 'react-dnd-html5-backend';
 import BoardSquare from './BoardSquare';
 
 export interface BoardProps {
@@ -20,14 +18,18 @@ const Container = styled.div`
 `;
 
 
-export default class Board extends React.Component<BoardProps> {
+class Board extends React.Component<BoardProps> {
   public render() {
     const squares = [];
     for (let i = 0; i < 64; i++) {
       squares.push(this.renderSquare(i));
     }
 
-    return <Container>{squares}</Container>;
+    return (
+      <Container>
+        {squares}
+      </Container>
+    );
   }
 
   private renderSquare(i: number) {
@@ -35,12 +37,15 @@ export default class Board extends React.Component<BoardProps> {
     const y = Math.floor(i / 8);
 
     return (
+
       <div key={i}
            style={{ width: '12.5%', height: '12.5%' }}>
         <BoardSquare x={x}
-                     y={y}>
+                     y={y}
+        >
           {this.renderPiece(x, y)}
         </BoardSquare>
+          
       </div>
     );
   }
@@ -52,3 +57,5 @@ export default class Board extends React.Component<BoardProps> {
 
   }
 }
+
+export default DragDropContext(HTML5Backend)(Board);

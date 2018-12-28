@@ -3,6 +3,7 @@ import * as ReactDOM from 'react-dom';
 import Board from './components/Board';
 import { observe } from './components/Game';
 
+
 export interface ChessboardTutorialAppState {
   knightPosition: [number, number]
 }
@@ -15,7 +16,7 @@ export default class ChessboardTutorialApp extends React.Component<
   ChessboardTutorialAppState
   > {
     public state: ChessboardTutorialAppState = { knightPosition: [1, 7] };
-    private unobserve?: (() => void)
+    private unobserve?: (() => void);
     
     public componentDidMount() {
       this.unobserve = observe(this.handleChange);

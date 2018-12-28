@@ -56,6 +56,7 @@ class BoardSquare extends React.Component<BoardSquareProps & CollectedProps> {
   public render() {
     const { x, y, connectDropTarget, isOver, canDrop, children } = this.props;
     const black = (x + y) % 2 === 1;
+    console.log(x, y);
 
     return connectDropTarget(
       <div
