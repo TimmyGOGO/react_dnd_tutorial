@@ -1,6 +1,6 @@
 **This project is a working(!) example 'Chessboard' from 'React-dnd-titorial'**
-- link to tutorial: _http://react-dnd.github.io/react-dnd/docs/tutorial_
-- link to tutorial docs: _https://github.com/react-dnd/react-dnd/tree/master/packages/documentation-examples/src/00%20Chessboard_
+- _link to tutorial_: http://react-dnd.github.io/react-dnd/docs/tutorial
+- _link to tutorial docs_: https://github.com/react-dnd/react-dnd/tree/master/packages/documentation-examples/src/00%20Chessboard
 
 **The tutorial is hard to follow**
 https://github.com/react-dnd/react-dnd/issues/1201
