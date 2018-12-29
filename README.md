@@ -3,7 +3,7 @@
 - _link to tutorial docs_: https://github.com/react-dnd/react-dnd/tree/master/packages/documentation-examples/src/00%20Chessboard
 
 **WARNING: The tutorial is hard to follow!**
-- _open issue (Feature request)_https://github.com/react-dnd/react-dnd/issues/1201
+- _open issue (Feature request)_: https://github.com/react-dnd/react-dnd/issues/1201
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
